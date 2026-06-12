@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Política Nuestra</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PANTALLA 1: Selección de personaje -->
+  <div id="pantalla-personaje" class="pantalla activa">
+    <div class="titulo-juego">
+      <h1>La Política Nuestra</h1>
+      <p class="subtitulo">Argentina. Siempre en crisis. Siempre con oportunidades.</p>
+    </div>
+    <h2>Elegí tu personaje</h2>
+    <div class="grilla-personajes">
+      <div class="tarjeta-personaje" data-id="gustavo">
+        <div class="retrato"><img src="assets/characters/gustavo.png" alt="Gustavo Peralta" /></div>
+        <h3>Gustavo Peralta</h3>
+        <p class="origen">Quilmes, GBA</p>
+        <p class="bio">Puntero histórico del conurbano. Sabe cómo funciona la maquinaria. Tiene contactos en todos lados y debe favores en todos lados también.</p>
+        <button class="btn-elegir" onclick="elegirPersonaje('gustavo')">Elegir</button>
+      </div>
+
+      <div class="tarjeta-personaje" data-id="julian">
+        <div class="retrato"><img src="assets/characters/julian.png" alt="Julián Herrera" /></div>
+        <h3>Julián Herrera</h3>
+        <p class="origen">La Quiaca, Jujuy</p>
+        <p class="bio">Hijo de maestros rurales. Creció viendo cómo las promesas nunca llegaban al interior. Quiere cambiar las cosas desde adentro.</p>
+        <button class="btn-elegir" onclick="elegirPersonaje('julian')">Elegir</button>
+      </div>
+
+      <div class="tarjeta-personaje" data-id="rodrigo">
+        <div class="retrato"><img src="assets/characters/rodrigo.png" alt="Rodrigo Casares" /></div>
+        <h3>Rodrigo Casares</h3>
+        <p class="origen">Mendoza Capital</p>
+        <p class="bio">Heredó una constructora familiar con contratos estatales. Siempre estuvo cerca del poder. Decidió que era hora de ser él quien firmara, no quien esperaba en la antesala.</p>
+        <button class="btn-elegir" onclick="elegirPersonaje('rodrigo')">Elegir</button>
+      </div>
+
+      <div class="tarjeta-personaje" data-id="valeria">
+        <div class="retrato"><img src="assets/characters/valeria.png" alt="Valeria Sánchez" /></div>
+        <h3>Valeria Sánchez</h3>
+        <p class="origen">La Plata, Buenos Aires</p>
+        <p class="bio">Abogada de derechos humanos. Conoce cada truco del sistema porque los combatió durante años. Ahora quiere usarlos a su favor.</p>
+        <button class="btn-elegir" onclick="elegirPersonaje('valeria')">Elegir</button>
+      </div>
+
+      <div class="tarjeta-personaje" data-id="marina">
+        <div class="retrato"><img src="assets/characters/marina.png" alt="Martín Ríos" /></div>
+        <h3>Martín Ríos</h3>
+        <p class="origen">Córdoba Capital</p>
+        <p class="bio">Empresario con contactos que prefieren no aparecer en los diarios. Entró a la política porque el negocio y el poder hace rato que son lo mismo.</p>
+        <button class="btn-elegir" onclick="elegirPersonaje('marina')">Elegir</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PANTALLA 2: Selección de provincia -->
+  <div id="pantalla-provincia" class="pantalla">
+    <div class="encabezado-pantalla">
+      <h2>¿Desde dónde empezás?</h2>
+      <p id="texto-personaje-elegido"></p>
+    </div>
+    <div class="grilla-provincias">
+      <button class="btn-provincia" onclick="elegirProvincia('Buenos Aires (CABA)')">Buenos Aires (CABA)</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Buenos Aires (GBA)')">Buenos Aires (GBA)</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Buenos Aires (Interior)')">Buenos Aires (Interior)</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Córdoba')">Córdoba</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Santa Fe')">Santa Fe</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Mendoza')">Mendoza</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Tucumán')">Tucumán</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Entre Ríos')">Entre Ríos</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Salta')">Salta</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Misiones')">Misiones</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Chaco')">Chaco</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Corrientes')">Corrientes</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Santiago del Estero')">Santiago del Estero</button>
+      <button class="btn-provincia" onclick="elegirProvincia('San Juan')">San Juan</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Jujuy')">Jujuy</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Río Negro')">Río Negro</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Neuquén')">Neuquén</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Formosa')">Formosa</button>
+      <button class="btn-provincia" onclick="elegirProvincia('San Luis')">San Luis</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Catamarca')">Catamarca</button>
+      <button class="btn-provincia" onclick="elegirProvincia('La Rioja')">La Rioja</button>
+      <button class="btn-provincia" onclick="elegirProvincia('La Pampa')">La Pampa</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Chubut')">Chubut</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Santa Cruz')">Santa Cruz</button>
+      <button class="btn-provincia" onclick="elegirProvincia('Tierra del Fuego')">Tierra del Fuego</button>
+    </div>
+  </div>
+
+  <!-- PANTALLA 2b: Selección de ciudad -->
+  <div id="pantalla-ciudad" class="pantalla">
+    <div class="encabezado-pantalla">
+      <h2>¿En qué ciudad arrancás?</h2>
+      <p id="texto-provincia-elegida"></p>
+    </div>
+    <div class="grilla-provincias" id="grilla-ciudades"></div>
+  </div>
+
+  <!-- PANTALLA 3: Oficina de operaciones -->
+  <div id="pantalla-oficina" class="pantalla">
+
+    <!-- Panel de stats (esquina superior derecha) -->
+    <div id="panel-stats">
+      <div class="stat-fila">
+        <span class="stat-label">💰 Dinero</span>
+        <div class="barra-contenedor"><div class="barra" id="barra-dinero"></div></div>
+        <span class="stat-valor" id="val-dinero">0</span>
+      </div>
+      <div class="stat-fila">
+        <span class="stat-label">⚡ Poder</span>
+        <div class="barra-contenedor"><div class="barra barra-poder" id="barra-poder"></div></div>
+        <span class="stat-valor" id="val-poder">0</span>
+      </div>
+      <button class="btn-historial" onclick="toggleHistorial()">Ver historial ▼</button>
+      <div id="historial" class="oculto">
+        <p class="historial-titulo">Últimas acciones</p>
+        <ul id="lista-historial"></ul>
+      </div>
+    </div>
+
+    <!-- Cargo actual + reputación -->
+    <div id="etiqueta-cargo">
+      <span id="cargo-texto">Militante de base</span>
+      <span id="zona-texto"></span>
+      <span id="rep-indicador" class="rep-badge">Desconocido</span>
+    </div>
+
+    <!-- Indicador de campaña (oculto hasta que se active) -->
+    <div id="banner-campania" class="oculto">
+      <span>📣 MODO CAMPAÑA</span>
+      <span id="campania-turnos">— turnos</span>
+    </div>
+
+    <!-- Oficina: escena con imagen real -->
+    <div id="oficina-scene">
+      <img id="oficina-bg" src="assets/offices/oficina.jpg" alt="Oficina" />
+
+      <!-- Puerta (izquierda) -->
+      <div class="hotspot" id="hs-puerta" onclick="abrirModal('puerta')"
+           style="left:0%; top:8%; width:14%; height:84%">
+        <span class="hs-label">🚪 Calle</span>
+      </div>
+
+      <!-- Pizarrón / Campaña -->
+      <div class="hotspot campania-hs" id="hs-campania" onclick="abrirModal('campania')"
+           style="left:10%; top:13%; width:21%; height:23%">
+        <span class="hs-label">📣 Campaña</span>
+      </div>
+
+      <!-- Mapa de Argentina -->
+      <div class="hotspot" id="hs-mapa" onclick="abrirModal('mapa')"
+           style="left:28%; top:2%; width:15%; height:26%">
+        <span class="hs-label">🗺️ Mapa</span>
+      </div>
+
+      <!-- Televisor / Noticias -->
+      <div class="hotspot" id="hs-tele" onclick="abrirModal('tele')"
+           style="left:41%; top:2%; width:14%; height:19%">
+        <span class="hs-label">📺 Noticias</span>
+        <span class="hs-badge" id="badge-tele">!</span>
+      </div>
+
+      <!-- Monitor / Redes -->
+      <div class="hotspot" id="hs-compu" onclick="abrirModal('compu')"
+           style="left:31%; top:23%; width:22%; height:22%">
+        <span class="hs-label">💻 Redes</span>
+      </div>
+
+      <!-- Agenda / cuaderno sobre el escritorio -->
+      <div class="hotspot" id="hs-agenda" onclick="abrirModal('agenda')"
+           style="left:2%; top:42%; width:35%; height:21%">
+        <span class="hs-label">📋 Agenda</span>
+        <span class="hs-badge agenda-badge" id="badge-agenda">0</span>
+      </div>
+
+      <!-- Equipo / persona en el escritorio -->
+      <div class="hotspot" id="hs-empleados" onclick="abrirModal('empleados')"
+           style="left:44%; top:21%; width:31%; height:32%">
+        <span class="hs-label">👥 Equipo</span>
+      </div>
+
+    </div>
+
+    <!-- Modal genérico -->
+    <div id="modal-overlay" class="oculto" onclick="cerrarModal()">
+      <div id="modal" onclick="event.stopPropagation()">
+        <button class="btn-cerrar" onclick="cerrarModal()">✕</button>
+        <div id="modal-contenido"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
